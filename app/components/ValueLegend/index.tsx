@@ -17,7 +17,7 @@ export const ValueLegend: React.FC<ValueLegendProps> = ({
   const sorted = React.useMemo(() => [...values].sort((a, b) => a - b), [values]);
 
   if (sorted.length === 0) {
-    return <div className="text-sm text-muted-foreground">Нет данных для отображения.</div>;
+    return <div className="pt-4 pb-3.5 text-sm text-muted-foreground">Нет данных для отображения.</div>;
   }
 
   const min = sorted[0];
@@ -31,7 +31,7 @@ export const ValueLegend: React.FC<ValueLegendProps> = ({
         style={{ background: "hsl(var(--muted))" }}
       >
         {sorted.map((v, i) => {
-          const t = same ? 0.5 : normalizeRobust(v, sorted, 0.05, 0.95);
+          const t = same ? 0.4 : normalizeRobust(v, sorted, 0.05, 0.95);
           const color = mapNormalizedToHexViaHsl(t, 0.75);
           return (
             <LegendNode
