@@ -10,9 +10,16 @@
   npm install
 ```
 
-First, run the development server:
+### Run
 
 ```bash
   npm run dev
 ```
+
+### Build
+
+```bash
+  npm run build
+```
+
 
